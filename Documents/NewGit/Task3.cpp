@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Create first meta-function to remove modifiers: 
 template <typename T>
 struct RemoveMod{
     using type = T;
@@ -26,6 +27,7 @@ struct RemoveMod<T[N]>{
     using type = typename RemoveMod<T>:: type;
 };
 
+// Second meta - function to return true type
 template<typename T>
 struct ReturnTrueType{
     using type = typename RemoveMod<T>:: type;
