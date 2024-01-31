@@ -264,7 +264,7 @@ public:
     }
 
     // Fuction to calculate L2 Norm: 
-    T& Norm(){
+    T Norm(){
         T result = 0;
         for (size_t i = 0; i < N; i++){
             result += pow(mat1[0][i],2);
